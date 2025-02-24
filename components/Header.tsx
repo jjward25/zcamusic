@@ -80,6 +80,14 @@ const Header = () => {
         </svg>
 
         {/* Profile Picture */}
+        <div className="absolute top-1/2 mt-12 transform -translate-y-1/2 flex-none w-60 h-60 rounded-full overflow-hidden">
+        <img
+            src="/goldrecord.png"
+            alt="prof"
+            className="w-full h-full object-cover transition-transform duration-500 ease-out hover:-rotate-180"
+          />
+        </div>
+
         <div className="absolute top-1/2 mt-12 transform -translate-y-1/2 flex-none w-40 h-40 rounded-full overflow-hidden border-2 border-black dark:border-white shadow-lg">
         <img
             src="/zca2.png"
