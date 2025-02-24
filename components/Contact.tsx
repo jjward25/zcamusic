@@ -2,6 +2,20 @@
 
 import { useEffect, useState } from "react"
 
+declare global {
+    interface Window {
+      Calendly?: {
+        initInlineWidget: (options: {
+          url: string
+          parentElement: HTMLElement | null
+          prefill?: Record<string, unknown>
+          utm?: Record<string, unknown>
+        }) => void
+      }
+    }
+  }
+  
+
 const Contact = () => {
   const [isCalendlyLoaded, setIsCalendlyLoaded] = useState(false)
 
@@ -12,18 +26,18 @@ const Contact = () => {
     document.body.appendChild(script)
 
     script.onload = () => {
-      if ((window as any).Calendly) {
-        ;(window as any).Calendly.initInlineWidget({
-          url: "https://calendly.com/zcastudioproduction",
-          parentElement: document.getElementById("calendly-inline-widget"),
-          prefill: {},
-          utm: {},
-        })
-
-        // Set a timeout to allow Calendly to fully render
-        setTimeout(() => setIsCalendlyLoaded(true), 1000)
+        if (window.Calendly) {
+          window.Calendly.initInlineWidget({
+            url: "https://calendly.com/zcastudioproduction",
+            parentElement: document.getElementById("calendly-inline-widget"),
+            prefill: {},
+            utm: {},
+          })
+      
+          setTimeout(() => setIsCalendlyLoaded(true), 1000)
+        }
       }
-    }
+      
 
     return () => {
       document.body.removeChild(script)

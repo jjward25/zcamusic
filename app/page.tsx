@@ -9,7 +9,7 @@ export default function Home() {
     <main className="min-h-screen bg-black bg-opacity-50 text-white">
       <Header />
       <Offerings />
-      <StudioImages />
+      <StudioImages /> 
       <div className="max-h-[700px] overflow-hidden">
       <Contact />
       </div>
