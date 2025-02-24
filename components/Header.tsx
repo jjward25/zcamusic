@@ -81,10 +81,10 @@ const Header = () => {
 
         {/* Profile Picture */}
         <div className="absolute top-1/2 mt-12 transform -translate-y-1/2 flex-none w-40 h-40 rounded-full overflow-hidden border-2 border-black dark:border-white shadow-lg">
-          <img
+        <img
             src="/zca2.png"
             alt="prof"
-            className="w-full h-full object-cover hover:scale-105 transition-all duration-500 ease-out"
+            className="w-full h-full object-cover transition-transform duration-500 ease-out hover:rotate-180"
           />
         </div>
       </div>
