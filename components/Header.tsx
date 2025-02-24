@@ -42,10 +42,10 @@ const Header = () => {
 
   return (
     <header className="relative h-64 mt-24 mb-16">
-      <canvas ref={canvasRef} width={800} height={200} className="w-1/3 h-full mx-auto" />
+      <canvas ref={canvasRef} width={800} height={300} className="w-full md:w-1/3 h-full mx-auto" />
 
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <svg viewBox="0 0 500 200" className="w-full max-w-2xl">
+        <svg viewBox="0 0 500 300" className="w-full max-w-2xl">
           <defs>
             <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stopColor="#1DB954" />
@@ -63,7 +63,7 @@ const Header = () => {
           <path
             id="curve"
             fill="transparent"
-            d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97"
+            d="M73.2,148.6c4-0,65.5-96.8,178.6-95.6c111.3,1.2,130.8,90.3,175.1,97"
           />
           <text width="500">
             <textPath xlinkHref="#curve" startOffset="50%" textAnchor="middle">
