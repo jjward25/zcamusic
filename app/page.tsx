@@ -5,7 +5,7 @@ import StudioImages from "../components/StudioImages"
 import Credits from "../components/Credits"
 
 export default function Home() {
-  return (
+  return ( 
     <main className="min-h-screen bg-black bg-opacity-50 text-white">
       <Header />
       <Offerings />
