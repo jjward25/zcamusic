@@ -63,8 +63,10 @@ const Header = () => {
           <path
             id="curve"
             fill="transparent"
-            d="M73.2,148.6c4-0,65.5-96.8,178.6-95.6c111.3,1.2,130.8,90.3,175.1,97"
+            d="M73.2,128.6c4,0,85.5,-86.8,178.6,-85.6c93.1,1.2,174.6,85.6,175.1,87"
           />
+
+
           <text width="500">
             <textPath xlinkHref="#curve" startOffset="50%" textAnchor="middle">
               <tspan className="text-6xl font-bold" fill="url(#titleGradient)" filter="url(#glow)">
