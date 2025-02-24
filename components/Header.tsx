@@ -14,7 +14,7 @@ const Header = () => {
 
     const bars = 20
     const barWidth = canvas.width / bars
-    const animationSpeed = 0.05 // Reduced speed
+    const animationSpeed = 0.05
 
     const heights = Array(bars).fill(0)
 
@@ -26,10 +26,9 @@ const Header = () => {
         heights[i] += (targetHeight - heights[i]) * animationSpeed
 
         const gradient = ctx.createLinearGradient(0, canvas.height, 0, canvas.height - heights[i])
-        gradient.addColorStop(0, "#00246B") // Spotify green at the bottom
-        gradient.addColorStop(0.7, "#FFA500") // Orange in the middle
-        gradient.addColorStop(1, "#CADCFC") // Red-orange at the top
-        
+        gradient.addColorStop(0, "#000000")
+        gradient.addColorStop(0.7, "#FFA500")
+        gradient.addColorStop(1, "#176161")
 
         ctx.fillStyle = gradient
         ctx.fillRect(i * barWidth, canvas.height - heights[i], barWidth - 2, heights[i])
@@ -44,8 +43,8 @@ const Header = () => {
   return (
     <header className="relative h-64 mt-24 mb-16">
       <canvas ref={canvasRef} width={800} height={200} className="w-1/3 h-full mx-auto" />
-      
-      <div className="absolute inset-0 flex items-center justify-center overflow-visible">
+
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
         <svg viewBox="0 0 500 200" className="w-full max-w-2xl">
           <defs>
             <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -73,15 +72,24 @@ const Header = () => {
               </tspan>
             </textPath>
           </text>
+
           <g className="animate-pulse">
             <circle cx="73.2" cy="148.6" r="4" fill="#1DB954" />
             <circle cx="426.9" cy="150" r="4" fill="#FF4500" />
           </g>
         </svg>
+
+        {/* Profile Picture */}
+        <div className="absolute top-1/2 mt-12 transform -translate-y-1/2 flex-none w-40 h-40 rounded-full overflow-hidden border-2 border-black dark:border-white shadow-lg">
+          <img
+            src="/zca2.png"
+            alt="prof"
+            className="w-full h-full object-cover hover:scale-105 transition-all duration-500 ease-out"
+          />
+        </div>
       </div>
     </header>
   )
 }
 
 export default Header
-
