@@ -17,7 +17,7 @@ export default function Home() {
       zcastudioproduction@gmail.com
       </p>
       
-      <Credits />
+      <Credits /> 
       <p className="text-center text-gray-400 text-sm mt-4 italic">
         © 2025 ZCA Studio Production. All rights reserved.
       </p>
