@@ -18,7 +18,7 @@ export default function Home() {
       </p>
       
       <Credits /> 
-      <p className="text-center text-gray-400 text-sm mt-4 italic">
+      <p className="text-center text-gray-400 text-sm my-4 italic">
         © 2025 ZCA Studio Production. All rights reserved.
       </p>
     </main>
